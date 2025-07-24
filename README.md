@@ -20,6 +20,8 @@ Este é um projeto simples e divertido desenvolvido durante o curso de lógica d
 
 ## ⚙️ Como Rodar o Projeto
 
+[Deploy no Vercel](https://jogo-do-numero-secreto-pi-lyart.vercel.app/)
+
 Siga os passos abaixo para ter o projeto rodando em sua máquina local:
 
 1.  **Clone o repositório (ou baixe o ZIP):**
