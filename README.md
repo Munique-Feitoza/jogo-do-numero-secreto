@@ -1,4 +1,4 @@
-# jogo-do-numero-secreto# 🎮 Jogo do Número Secreto
+# 🎮 Jogo do Número Secreto
 
 Este é um projeto simples e divertido desenvolvido durante o curso de lógica de programação com JavaScript da Alura. O objetivo do jogo é adivinhar um número secreto gerado aleatoriamente dentro de um intervalo definido.
 
