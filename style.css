@@ -1,0 +1,193 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+body {
+    background: linear-gradient(#1354A5 0%, #041832 33.33%, #041832 66.67%, #01080E 100%);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Base font size for better scaling across devices */
+    font-size: 16px; /* A good default for accessibility */
+}
+
+body::before {
+    background-image: url("img/code.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+}
+
+.container {
+    width: 90%; /* Increased width for better use of space on smaller screens */
+    max-width: 1200px;
+    /* Use min-height to allow content to expand, but prevent collapse */
+    min-height: 80vh; /* Using vh for initial height, flexible */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 24px;
+    border: 1px solid #1875E8;
+    box-shadow: 4px 4px 20px 0px rgba(1, 8, 14, 0.15);
+    background-image: url("img/Ruido.png");
+    background-size: 100% 100%;
+    position: relative;
+    overflow: hidden;
+    /* Use flex-wrap for better layout on smaller screens */
+    flex-wrap: wrap;
+}
+
+.container__conteudo {
+    display: flex;
+    align-items: center;
+    /* Removed absolute positioning for better flow */
+    position: relative; /* Changed to relative if absolute isn't necessary */
+    width: 100%; /* Ensure it takes full width of container */
+}
+
+.container__informacoes {
+    flex: 1;
+    padding: 3rem;
+    /* Set a min-width to prevent content from becoming too narrow */
+    min-width: 300px;
+}
+
+.container__botao {
+    border-radius: 16px;
+    background: #1875E8;
+    padding: 1em 1.5em;
+    width: 100%;
+    /* Use em for font size to scale with parent */
+    font-size: 1.2em; /* Adjusted relative to body font-size */
+    font-weight: 700;
+    border: none;
+    margin-top: 2rem;
+}
+
+.container__texto {
+    margin: 16px 0;
+}
+
+.container__texto-azul {
+    color: #1875E8;
+}
+
+.container__input {
+    width: 100%;
+    height: 72px;
+    border-radius: 16px;
+    background-color: #FFF;
+    border: none;
+    color: #1875E8;
+    padding: 1.5rem;
+    /* Use em for font size for better scaling */
+    font-size: 1.2em; /* Adjusted relative to body font-size */
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+}
+
+.container__botoes {
+    display: flex;
+    gap: 2em;
+    /* Allow buttons to wrap on smaller screens */
+    flex-wrap: wrap;
+}
+
+h1 {
+    font-family: 'Chakra Petch', sans-serif;
+    /* Use em for font size to scale with body font-size */
+    font-size: 3em; /* Adjusted */
+    padding-bottom: 3rem;
+}
+
+p,
+button {
+    font-family: 'Inter', sans-serif;
+}
+
+.texto__paragrafo {
+    /* Use em for font size to scale with body font-size */
+    font-size: 1.2em; /* Adjusted */
+    font-weight: 400;
+}
+
+button:disabled {
+    background-color: gray;
+}
+
+.container__imagem-pessoa {
+    /* Ensure image scales down */
+    max-width: 50%; /* Adjust as needed */
+    height: auto;
+    display: block; /* Ensure it behaves as a block element */
+}
+
+/* Media Query for smaller screens */
+@media screen and (max-width: 992px) { /* Adjusted breakpoint for more common tablet/laptop sizes */
+    .container {
+        flex-direction: column; /* Stack items vertically */
+        height: auto; /* Allow height to adjust */
+        min-height: unset; /* Remove min-height from desktop */
+        padding: 1rem; /* Add some padding to the container itself */
+    }
+
+    .container__conteudo {
+        flex-direction: column; /* Stack image and info vertically if they were side-by-side */
+    }
+
+    .container__informacoes {
+        padding: 1rem;
+        text-align: center; /* Center text for smaller screens */
+    }
+
+    .container__imagem-pessoa {
+        display: none; /* Hide image completely on smaller screens */
+    }
+
+    h1 {
+        font-size: 2.5em; /* Further adjust h1 size for smaller screens */
+        padding-bottom: 1rem;
+    }
+
+    .texto__paragrafo {
+        font-size: 1.1em; /* Further adjust paragraph size */
+    }
+
+    .container__input {
+        height: 60px; /* Smaller input on mobile */
+        font-size: 1em;
+        padding: 1rem;
+    }
+
+    .container__botao {
+        font-size: 1em; /* Smaller button text */
+        margin-top: 1rem;
+        padding: 0.8em 1em;
+    }
+
+    .container__botoes {
+        flex-direction: column; /* Stack buttons vertically on very small screens */
+        gap: 1em;
+    }
+}
+
+/* Further adjustment for very small mobile screens */
+@media screen and (max-width: 576px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    .texto__paragrafo {
+        font-size: 1em;
+    }
+}
